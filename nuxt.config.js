@@ -1,4 +1,6 @@
 const pkg = require('./package')
+// const hljs=require('highlight.js')
+//var md=require('@nuxtjs/markdownit')
 
 module.exports = {
   mode: 'universal',
@@ -27,7 +29,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'github-markdown-css/github-markdown.css',
+    // 'highlight.js/styles/solarized-dark.css',
   ],
 
   /*
@@ -42,14 +46,34 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // '@nuxtjs/markdownit',
   ],
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    host: '127.0.0.1',
+    port: '1171',
+    credentials: false,
   },
+
+  // markdownit: {
+  //   injected: true,
+  //   // highlight: function (str, lang) {
+  //   //   console.log(str)
+  //   //   if (lang && hljs.getLanguage(lang)) {
+  //   //     try {
+  //   //       return '<pre class="hljs"><code>' +
+  //   //              hljs.highlight(lang, str, true).value +
+  //   //              '</code></pre>';
+  //   //     } catch (__) {}
+  //   //   }
+
+  //   //   //return '<pre class="hljs"><code>' + markdownit.utils.escapeHtml(str) + '</code></pre>';
+  //   // }
+  // },
 
   /*
   ** Build configuration
@@ -68,6 +92,9 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    // babel: {
+    //   presets: ['es2015', 'stage-0']
+    // }
   }
 }
