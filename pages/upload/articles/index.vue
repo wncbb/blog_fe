@@ -41,7 +41,7 @@ export default {
             // );
             // console.log("tmp: ", tmp)
             let resp=await this.$axios.$post(
-                "http://127.0.0.1:1171/api/articles",
+                "http://wncbb.cn/api/articles",
                 this.form
             )
             // console.log(resp)

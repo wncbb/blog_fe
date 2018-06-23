@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
-    "cross-env": "^5.0.1",
+    "cross-env": "^5.2.0",
     "eslint": "^4.15.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.17.5"
   }
 }
